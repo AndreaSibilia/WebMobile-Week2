@@ -16,10 +16,17 @@
 	</style>
 	
 	<script>
+	// add the load data functionality
 	function loadEarthquakeData(){
 		alert("loading earthquakes data")
 		getEarthquakes();
 		}
+	// add the remove data functionality
+	function removeEarthquakeData(){
+		alert("removing the earthquake data")
+		mymap.removeLayer(earthquakelayer);
+		}
+	
 	// create a variable that will hold the XMLHttpRequest() - this must be done outside a function so that all the functions can use the same variable
 	var client;
 	// create the code to get the Earthquakes data using an XMLHttpRequest
@@ -55,6 +62,7 @@
 	<!--the mapid div will hold the map-->
 	<div id="mapid" style="width:600px; height:400px;"></div>
 	<button id="loadData" name="loadData" onclick="loadEarthquakeData()">Click here to load the data</button>
+	<button id="removeEarthquakeData" name="removeEarthquakeData" onclick="removeEarthquakeData()">Click here to remove earthquake data</button>
 	
 	<!-- the following script will load the map and set the default view and zoom, as well as loading the basemap tiles -->
 	<script>
