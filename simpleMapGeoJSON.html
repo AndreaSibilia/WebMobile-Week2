@@ -34,20 +34,21 @@
 			id: 'mapbox.streets'
 		}).addTo(mymap);
 		
-		//create a geoJSON feature
-		var geojsonFeature={
-			"type":"Feature",
-			"properties":{
-				"name":"London",
-				"popupContent":"This is where UCL is based"
-				},
-			"geometry:{
-				"type":"Point",
-				"coordinates":[-0.133896, 51.524526]
-				}
-			};
-		// add geoJSON to map
-		L.geoJSON(geojsonFeature).addTo(mymap).bindPopup("<b>"+geojsonFeature.properties.name+" "+geojsonFeature.properties.popupContent+"<b>");
+		
+		// create a geoJSON feature -
+		var geojsonFeature = {
+			"type": "Feature",
+			"properties": {
+				"name": "London",
+				"popupContent": "This is where UCL is based"
+			},
+			"geometry": {
+			"type": "Point",
+			"coordinates": [-0.133896, 51.524526]
+			}
+		};
+		// add the geoJSON to the map
+		L.geoJSON(geojsonFeature).addTo(mymap).bindPopup("<b>"+geojsonFeature.properties.name + geojsonFeature.properties.popupContent+"<b>");
 	</script>
 </body>
 </html>
